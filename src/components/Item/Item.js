@@ -17,7 +17,7 @@ class Item extends Component {
         <img src={this.props.item.image_url} alt={this.props.item.description} className="itemImage"></img>
         <p>{this.props.item.description}</p>
         {this.props.item.user_id === this.props.user.id &&
-        <button onClick={this.deleteButton}>Delete</button>}
+        <button onClick={this.deleteButton} className="deleteButton">Delete</button>}
       </div>
     );
   }

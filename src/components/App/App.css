@@ -55,9 +55,37 @@ input {
     margin: 10px;
     border-radius: 20px;
     vertical-align: top;
+    text-align: left;
+    box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.shelfItem:hover {
+    background-color: #b0acac;
+
 }
 .itemImage{
     height: 400px;
     width: 400px;
     border-radius: 20px;
+}
+.shelf{
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.deleteButton{
+    padding: 4px 20px;
+    border-radius: 6px;
+    background-color: #ff4545;
+    font-weight: 400;
+    font-size: medium;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+}
+.deleteButton:hover {
+    background-color: #913333;
 }
