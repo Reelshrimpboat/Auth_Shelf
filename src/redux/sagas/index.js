@@ -2,6 +2,7 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './loginSaga';
 import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
+import postSaga from './postSaga'
 import listSaga from './fetchItemSaga';
 import deleteSaga from './deleteSaga';
 
@@ -17,6 +18,7 @@ export default function* rootSaga() {
     loginSaga(),
     registrationSaga(),
     userSaga(),
+    postSaga(),
     listSaga(),
     deleteSaga()
   ]);
