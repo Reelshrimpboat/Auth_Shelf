@@ -8,9 +8,7 @@ import ItemForm from '../ItemForm/ItemForm'
 
 const InfoPage = () => (
   <div>
-    <p>
-      Shelf Page
-    </p>
+    <h1>Welcome to Our Shelf</h1>
     <ShelfList />
     <ItemForm/>
   </div>

@@ -12,7 +12,7 @@ class ItemList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="shelf">
         {this.props.list &&
         this.props.list.map((item)=>
         <Item key={item.id} item={item}/>)
