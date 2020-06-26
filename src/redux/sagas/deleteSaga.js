@@ -3,7 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 function* deleteItem(action) {
     try {
-        const response = yield axios.delete(`/api/shelf/${action.payload}`);
+        yield axios.delete(`/api/shelf/${action.payload}`);
         yield put({ type: 'FETCH_ITEMS' });
     } catch (error) {
         console.log('List get request failed', error);
