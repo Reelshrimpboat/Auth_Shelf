@@ -14,7 +14,15 @@ router.get('/', (req, res) => {
  * Add an item for the logged in user to the shelf
  */
 router.post('/', (req, res) => {
-
+    const queryText = `INSERT INTO "item" ("description", "image_url", "user_id")
+    VALUES ('${req.body.description}', '${req.body.url}', '${req.user.id}')`
+        pool.query(queryText)
+        .then((results) => {
+            res.send(results);
+        }).catch((error) => {
+            console.log(error);
+            res.sendStatus(500);
+        })
 });
 
 
