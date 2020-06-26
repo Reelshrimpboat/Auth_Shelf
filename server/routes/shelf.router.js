@@ -8,7 +8,7 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log('req.user:', req.user);
     if (req.isAuthenticated()) {
-        pool.query('SELECT * FROM item WHERE item.user_id = $1;', [req.user.id])
+        pool.query('SELECT * FROM item;')
             .then(results => res.send(results.rows))
             .catch(error => {
                 console.log('Error making SELECT for items:', error);
