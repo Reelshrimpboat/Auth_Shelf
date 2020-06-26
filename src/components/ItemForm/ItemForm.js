@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './ItemForm.css'
+import { connect } from 'react-redux';
 class ItemForm extends Component{
     state ={
         description:'',
@@ -12,7 +13,7 @@ class ItemForm extends Component{
         })
     }
     firePayload=()=>{
-        this.dispatch({type:'ADD_ITEM', payload:{description:this.state.description, url:this.state.url}})
+        this.props.dispatch({type:'ADD_ITEM', payload:{description:this.state.description, url:this.state.url}})
         console.log(this.state)
         this.setState({
             description:'',
@@ -43,4 +44,4 @@ class ItemForm extends Component{
     }
 }
 
-export default ItemForm;
+export default connect()(ItemForm);
