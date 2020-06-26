@@ -1,6 +1,6 @@
 import React from 'react';
 import ShelfList from '../ShelfList/ShelfList';
-
+import ItemForm from '../ItemForm/ItemForm'
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
 // It doesn't dispatch any redux actions or display any part of redux state
@@ -12,6 +12,7 @@ const InfoPage = () => (
       Shelf Page
     </p>
     <ShelfList />
+    <ItemForm/>
   </div>
 );
 
