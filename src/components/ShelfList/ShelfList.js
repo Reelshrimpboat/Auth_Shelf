@@ -6,17 +6,17 @@ class ItemList extends Component {
 
   componentDidMount = () =>{
     this.props.dispatch({
-      type: 'GET_LIST'
+      type: 'FETCH_ITEMS'
     })
   }
 
   render() {
     return (
       <div>
-        <h2>Hello from Item List!</h2>
-        {this.props.item &&
-        this.props.item.map((item)=>
-        <Item key={item.id} item={item}/>)}
+        {this.props.list &&
+        this.props.list.map((item)=>
+        <Item key={item.id} item={item}/>)
+      }
       </div>
     );
   }
@@ -24,7 +24,7 @@ class ItemList extends Component {
 
 
 const mapStateToProps = state => ({
-  item: state.listSaga
+  list: state.list
 });
 
 export default connect(mapStateToProps)(ItemList);
